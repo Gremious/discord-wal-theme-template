@@ -80,32 +80,33 @@
 	--user-buttons-spacing: 8px;
 	--user-buttons-color: var(--wal-foreground);
 	--role-circle: 10px;
-	--discord-logo: none;
-	--colored-emoji: grayscale(0%);
-	--disable-animations: 2s channel-unread infinite;
 }}
 
 .theme-dark {{
 	--background-primary: var(--wal-background);
 	--background-secondary: var(--wal-background-light);
-	--background-secondary-alt: #var(--wal-color-4-blue);
-	--background-tertiary: var(--wal-background-extra-light);
+	--background-secondary-alt: var(--wal-background-extra-light);
+	--background-tertiary: var(--wal-background);
 	--background-mobile-primary: var(--wal-background);
 	--background-mobile-secondary: var(--wal-background);
 	--channeltextarea-background: var(--wal-background);
-	--background-accent: #var(--wal-color-4-blue);
-	--background-modifier-hover: rgba(0, 0, 0, 0.06);
-	--background-modifier-active: rgba(0, 0, 0, 0.10);
-	--background-modifier-selected: rgba(0, 0, 0, 0.12);
-	--deprecated-card-bg: rgba(18, 20, 31, 0.39);
-	--background-floating: rgb(255,193,7,1);
-	--deprecated-quickswitcher-input-background: red;
-	--scrollbar-auto-thumb: red;
-	--scrollbar-auto-track: red;
-	--scrollbar-thin-thumb: red;
+	--background-accent: var(--wal-color-4-blue);
+	--background-modifier-hover: rgba(0, 0, 0, 0.20);
+	--background-modifier-active: rgba(0, 0, 0, 0.25);
+	--background-modifier-selected: rgba(0, 0, 0, 0.30);
+	--scrollbar-auto-thumb: var(--wal-background-extra-light);
+	--scrollbar-auto-track: var(--wal-background);
+	--scrollbar-thin-thumb: var(--wal-foreground);
 	--activity-card-background: red;
 	--background-message-hover: transparent;
-	--elevation-low: none;
+	--background-floating: var(--wal-background);
+
+	/*  Discord originals: */
+	/* --search-popout-option-fade: linear-gradient(90deg,hsl(var(--primary-800-hsl)/0),hsl(var(--primary-800-hsl)/1) 80%);; */
+	/* --search-popout-option-fade-hover: linear-gradient(90deg,hsl(var(--primary-600-hsl)/0),var(--primary-600) 50%); */
+
+	/* --search-popout-option-fade-hover: linear-gradient(to right, rgba(0,0,0,0), var(--wal-background-extra-light)); */
+	--search-popout-option-fade-hover: linear-gradient(90deg,hsl(var(--wal-background-extra-light)/0),var(--wal-background-extra-light) 50%);
 }}
 
 /* idk i don't use light theme sorry */
