@@ -1,5 +1,5 @@
 /**
- * @name discord-wal.css
+ * @name asd
  * @author Nyria#3863
  * @version 2.2
  * @description Stay comfy while talking to your friends.
@@ -13,12 +13,12 @@
 @import url('https://comfy-themes.github.io/Discord/betterdiscord/better-spotify.css');
 
 :root {
-  --mention-color-bar: #C66262;
+  --mention-color-bar: #6F61AA;
   --mention-color-background: rgba(198, 98, 98, 0.12);
   --mention-color-hover: rgba(198, 98, 98, 0.15);
-  --mention-color: #F04747;
-  --unread-color: #7289DA;
-  --chat-buttons: #7289DA;
+  --mention-color: #6F61AA;
+  --unread-color: #6753AA;
+  --chat-buttons: #6753AA;
   --avatar-radius: 5px;
   --status-radius: 3px;
   --server-radius: 8px;
@@ -30,7 +30,7 @@
   --streaming: #593695;
   --spotify-color: #1EDC62;
   --user-buttons-spacing: 8px;
-  --user-buttons-color: #096DC0;
+  --user-buttons-color: #C4C4C7;
   --role-circle: 10px;
   --discord-logo: none;
   --colored-emoji: grayscale(0%);
@@ -38,24 +38,24 @@
 }
 
 .theme-dark {
-  --background-primary: #23283D;
-  --background-secondary: #1E2233;
-  --background-secondary-alt: #191F2E;
-  --background-tertiary: #101320;
-  --background-mobile-primary: #23283D;
-  --background-mobile-secondary: #1E2233;
-  --channeltextarea-background: #191F2E;
-  --background-accent: #7289DA;
+  --background-primary: #161321;
+  --background-secondary: #161321;
+  --background-secondary-alt: #6753AA;
+  --background-tertiary: #161321;
+  --background-mobile-primary: #161321;
+  --background-mobile-secondary: #161321;
+  --channeltextarea-background: #161321;
+  --background-accent: #6753AA;
   --background-modifier-hover: rgba(0, 0, 0, 0.06);
   --background-modifier-active: rgba(0, 0, 0, 0.10);
   --background-modifier-selected: rgba(0, 0, 0, 0.12);
   --deprecated-card-bg: rgba(18, 20, 31, 0.39);
-  --background-floating: #101320;
-  --deprecated-quickswitcher-input-background: #101320;
-  --scrollbar-auto-thumb: #121722;
-  --scrollbar-auto-track: #191F2E;
-  --scrollbar-thin-thumb: #141925;
-  --activity-card-background: #101320;
+  --background-floating: rgb(255,193,7,1);
+  --deprecated-quickswitcher-input-background: #F44336;
+  --scrollbar-auto-thumb: #F44336;
+  --scrollbar-auto-track: #F44336;
+  --scrollbar-thin-thumb: #F44336;
+  --activity-card-background: #F44336;
   --background-message-hover: transparent;
   --elevation-low: none;
 }
