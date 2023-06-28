@@ -1,0 +1,129 @@
+/**
+ * @name Comfy theme + wal support.
+ * @author Comfy: Nyria#3863, Wal support: Gremious
+ * @version 2.2
+ * @description Stay comfy while talking to your friends. Now with wal.
+ * @invite rtBQX5D3bD
+ * @source https://github.com/NYRI4/Comfy
+ * @BDEditor Comfy
+*/
+
+@import url('https://comfy-themes.github.io/Discord/betterdiscord/main.css');
+@import url('https://comfy-themes.github.io/Discord/betterdiscord/no-scrollbar.css');
+@import url('https://comfy-themes.github.io/Discord/betterdiscord/better-spotify.css');
+
+:root {{
+	/* Background is defined later, with various luminosities. */
+	--wal-foreground: {foreground};
+	--wal-cursor: {cursor};
+
+	--wal-color-0-black: {color0};
+	--wal-color-1-red: {color1};
+	--wal-color-2-green: {color2};
+	--wal-color-3-yellow: {color3};
+	--wal-color-4-blue: {color4};
+	--wal-color-5-purple: {color5};
+	--wal-color-6-cyan: {color6};
+	--wal-color-7-white: {color7};
+
+	--wal-color-8-bright-black: {color8};
+	--wal-color-9-bright-red: {color9};
+	--wal-color-10-bright-green: {color10};
+	--wal-color-11-bright-yellow: {color11};
+	--wal-color-12-bright-blue:  {color12};
+	--wal-color-13-bright-purple: {color13};
+	--wal-color-14-bright-cyan:  {color14};
+	--wal-color-15-bright-white: {color15};
+
+
+	/*
+	https://css-tricks.com/css-variables-calc-rgb-enforcing-high-contrast-colors/
+	feat.
+	https://github.com/Frewacom/walfox/blob/master/src/utils/colors.ts#L21C50-L21C50
+	(which itself refers to)
+	https://www.sitepoint.com/javascript-generate-lighter-darker-color/
+	 */
+
+	/* walfox values, so that it's nice and matching */
+	--background-light-luminance: 1.25;
+	--background-extra-light-luminance: 1.85;
+
+	--wal-bg-red: {background.red};
+	--wal-bg-green: {background.green};
+	--wal-bg-blue: {background.blue};
+
+	--wal-red-light: min(max(0, calc(var(--wal-bg-red) + (var(--wal-bg-red) * var(--background-light-luminance)))), 255);
+	--wal-green-light: min(max(0, calc(var(--wal-bg-green) + (var(--wal-bg-green) * var(--background-light-luminance)))), 255);
+	--wal-blue-light: min(max(0, calc((var(--wal-bg-blue) + var(--wal-bg-blue) * var(--background-light-luminance)))), 255);
+
+	--wal-red-extra-light: min(max(0, calc(var(--wal-bg-red) + (var(--wal-bg-red) * var(--background-extra-light-luminance)))), 255);
+	--wal-green-extra-light: min(max(0, calc(var(--wal-bg-green) + (var(--wal-bg-green) * var(--background-extra-light-luminance)))), 255);
+	--wal-blue-extra-light: min(max(0, calc((var(--wal-bg-blue) + var(--wal-bg-blue) * var(--background-extra-light-luminance)))), 255);
+
+	--wal-background: rgb(var(--wal-bg-red), var(--wal-bg-green), var(--wal-bg-blue));
+	--wal-background-light: rgb(var(--wal-red-light), var(--wal-green-light), var(--wal-blue-light));
+	--wal-background-extra-light: rgb(var(--wal-red-extra-light), var(--wal-green-extra-light), var(--wal-blue-extra-light));
+
+	/*  ==/ Actual theme colors /== */
+
+	--mention-color-bar: var(--wal-color-1-red);
+	--mention-color-background: rgba(198, 98, 98, 0.12);
+	--mention-color-hover: rgba(198, 98, 98, 0.15);
+	--mention-color: var(--wal-color-1-red);
+	--unread-color: var(--wal-color-4-blue);
+	--chat-buttons: var(--wal-color-4-blue);
+	--avatar-radius: 5px;
+	--status-radius: 3px;
+	--server-radius: 8px;
+	--status-background: url('https://i.imgur.com/ODa8LKK.jpg');
+	--online: #43B581;
+	--iddle: #FAA61A;
+	--dnd: #F04747;
+	--offline: #747F8D;
+	--streaming: #593695;
+	--spotify-color: #1EDC62;
+	--user-buttons-spacing: 8px;
+	--user-buttons-color: var(--wal-foreground);
+	--role-circle: 10px;
+	--discord-logo: none;
+	--colored-emoji: grayscale(0%);
+	--disable-animations: 2s channel-unread infinite;
+}}
+
+.theme-dark {{
+	--background-primary: var(--wal-background);
+	--background-secondary: var(--wal-background-light);
+	--background-secondary-alt: #var(--wal-color-4-blue);
+	--background-tertiary: var(--wal-background-extra-light);
+	--background-mobile-primary: var(--wal-background);
+	--background-mobile-secondary: var(--wal-background);
+	--channeltextarea-background: var(--wal-background);
+	--background-accent: #var(--wal-color-4-blue);
+	--background-modifier-hover: rgba(0, 0, 0, 0.06);
+	--background-modifier-active: rgba(0, 0, 0, 0.10);
+	--background-modifier-selected: rgba(0, 0, 0, 0.12);
+	--deprecated-card-bg: rgba(18, 20, 31, 0.39);
+	--background-floating: rgb(255,193,7,1);
+	--deprecated-quickswitcher-input-background: red;
+	--scrollbar-auto-thumb: red;
+	--scrollbar-auto-track: red;
+	--scrollbar-thin-thumb: red;
+	--activity-card-background: red;
+	--background-message-hover: transparent;
+	--elevation-low: none;
+}}
+
+/* idk i don't use light theme sorry */
+
+/* .theme-light {{ */
+	/* --background-primary: #23283D; */
+	/* --background-secondary: #1E2233; */
+	/* --background-secondary-alt: #191F2E; */
+	/* --background-tertiary: #101320; */
+	/* --background-accent: #7289DA; */
+	/* --background-modifier-hover: #262B41; */
+	/* --background-modifier-active: #262B41; */
+	/* --header-primary: #fff; */
+	/* --header-secondary: #B1B5B9; */
+	/* --text-normal: #8E9297; */
+/* }} */
