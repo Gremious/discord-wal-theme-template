@@ -48,9 +48,13 @@
 	--background-light-luminance: 1.25;
 	--background-extra-light-luminance: 1.85;
 
-	--wal-bg-red: {background.red};
-	--wal-bg-green: {background.green};
-	--wal-bg-blue: {background.blue};
+	--wal-bg-red-raw: {background.red};
+	--wal-bg-green-raw: {background.green};
+	--wal-bg-blue-raw: {background.blue};
+
+	--wal-bg-red: calc(var(--wal-bg-red-raw) – min(0)) / (max(1) – min(0)) * 255;
+	--wal-bg-green: calc(var(--wal-bg-green-raw) – min(0)) / (max(1) – min(0)) * 255;
+	--wal-bg-blue: calc(var(--wal-bg-blue-raw) – min(0)) / (max(1) – min(0)) * 255;
 
 	--wal-red-light: min(max(0, calc(var(--wal-bg-red) + (var(--wal-bg-red) * var(--background-light-luminance)))), 255);
 	--wal-green-light: min(max(0, calc(var(--wal-bg-green) + (var(--wal-bg-green) * var(--background-light-luminance)))), 255);
