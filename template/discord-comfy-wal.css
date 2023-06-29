@@ -101,12 +101,16 @@
 	--background-message-hover: transparent;
 	--background-floating: var(--wal-background);
 
-	/*  Discord originals: */
-	/* --search-popout-option-fade: linear-gradient(90deg,hsl(var(--primary-800-hsl)/0),hsl(var(--primary-800-hsl)/1) 80%);; */
-	/* --search-popout-option-fade-hover: linear-gradient(90deg,hsl(var(--primary-600-hsl)/0),var(--primary-600) 50%); */
+	/* Little dark side-bit when you click the search bar.*/
+	/* You can't actually see it in the default Discord theme? */
+	/* So we hide it cause you can deffo see it on any other color theme and it looks bad.*/
+	--search-popout-option-fade: 0;
+	/* original */
+	/* --search-popout-option-fade: linear-gradient(90deg,hsl(var(--primary-800-hsl)/0),hsl(var(--primary-800-hsl)/1) 80%); */
 
-	/* --search-popout-option-fade-hover: linear-gradient(to right, rgba(0,0,0,0), var(--wal-background-extra-light)); */
-	--search-popout-option-fade-hover: linear-gradient(90deg,hsl(var(--wal-background-extra-light)/0),var(--wal-background-extra-light) 50%);
+	--search-popout-option-fade-hover: linear-gradient(90deg, rgba(var(--wal-red-extra-light), var(--wal-green-extra-light), var(--wal-blue-extra-light), 0), var(--wal-background-extra-light) 50%);
+	/* original */
+	/* --search-popout-option-fade-hover: linear-gradient(90deg,hsl(var(--primary-600-hsl)/0),var(--primary-600) 50%); */
 }}
 
 /* idk i don't use light theme sorry */
