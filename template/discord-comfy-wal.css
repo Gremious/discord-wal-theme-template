@@ -58,48 +58,47 @@
 	--wal-background: rgb(var(--wal-bg-red), var(--wal-bg-green), var(--wal-bg-blue));
 	--wal-background-light: rgb(var(--wal-red-light), var(--wal-green-light), var(--wal-blue-light));
 	--wal-background-extra-light: rgb(var(--wal-red-extra-light), var(--wal-green-extra-light), var(--wal-blue-extra-light));
+}}
 
-	/*  ==/ Actual theme colors /== */
-
-	--mention-color-bar: var(--wal-color-1-red);
-	--mention-color-background: rgba(198, 98, 98, 0.12);
-	--mention-color-hover: rgba(198, 98, 98, 0.15);
-	--mention-color: var(--wal-color-1-red);
-	--unread-color: var(--wal-color-4-blue);
-	--chat-buttons: var(--wal-color-4-blue);
-	--avatar-radius: 5px;
-	--status-radius: 3px;
-	--server-radius: 8px;
-	--status-background: url('https://i.imgur.com/ODa8LKK.jpg');
-	--online: #43B581;
-	--iddle: #FAA61A;
-	--dnd: #F04747;
-	--offline: #747F8D;
-	--streaming: #593695;
-	--spotify-color: #1EDC62;
-	--user-buttons-spacing: 8px;
-	--user-buttons-color: var(--wal-foreground);
-	--role-circle: 10px;
+/* Text selection color, I just think it's cool. */
+::selection {{
+	color: var(--wal-foreground);
+	background: var(--wal-background-extra-light);
 }}
 
 .theme-dark {{
+	/* This is nice, but I find it a bit harder to read if it's darker. */
+	/* --text-normal: var(--wal-foreground); */
+	--interactive-normal: var(--wal-foreground);
 	--background-primary: var(--wal-background);
+	/* The "Discord purple" color - main setting buttons, "x unread messages" tooltip, etc. */
+	--brand-experiment: var(--wal-color-12-bright-blue);
+
+	/* This guy just kinda overrides a bunch of stuff consistently, for free. */
+	/* Sidebar, search box, text box, etc. */
+	--bg-overlay-3: var(--wal-background-light);
+
+	/* Chat text box, overriden by the guy above. */
+	/* --channeltextarea-background: var(--wal-background-extra-light); */
+
+	/* Still used for e.g. video embed backgrounds */
 	--background-secondary: var(--wal-background-light);
+
 	--background-secondary-alt: var(--wal-background-extra-light);
 	--background-tertiary: var(--wal-background);
 	--background-mobile-primary: var(--wal-background);
-	--background-mobile-secondary: var(--wal-background);
-	--channeltextarea-background: var(--wal-background);
-	--background-accent: var(--wal-color-4-blue);
+	--background-mobile-secondary: var(--wal-background-light);
+    --button-secondary-background: var(--wal-background);
+	--background-floating: var(--wal-background);
+
 	--background-modifier-hover: rgba(0, 0, 0, 0.20);
 	--background-modifier-active: rgba(0, 0, 0, 0.25);
 	--background-modifier-selected: rgba(0, 0, 0, 0.30);
+
 	--scrollbar-auto-thumb: var(--wal-background-extra-light);
-	--scrollbar-auto-track: var(--wal-background);
+	--scrollbar-auto-track: rgba(var(--wal-red-light), var(--wal-green-light), var(--wal-blue-light), 0.75);
+	/* Used in settings, left side */
 	--scrollbar-thin-thumb: var(--wal-foreground);
-	--activity-card-background: red;
-	--background-message-hover: transparent;
-	--background-floating: var(--wal-background);
 
 	/* Little dark side-bit when you click the search bar.*/
 	/* You can't actually see it in the default Discord theme? */
@@ -114,16 +113,5 @@
 }}
 
 /* idk i don't use light theme sorry */
-
 /* .theme-light {{ */
-	/* --background-primary: #23283D; */
-	/* --background-secondary: #1E2233; */
-	/* --background-secondary-alt: #191F2E; */
-	/* --background-tertiary: #101320; */
-	/* --background-accent: #7289DA; */
-	/* --background-modifier-hover: #262B41; */
-	/* --background-modifier-active: #262B41; */
-	/* --header-primary: #fff; */
-	/* --header-secondary: #B1B5B9; */
-	/* --text-normal: #8E9297; */
 /* }} */
