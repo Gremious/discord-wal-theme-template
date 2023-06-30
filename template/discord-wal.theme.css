@@ -71,6 +71,13 @@
 	/* --text-normal: var(--wal-foreground); */
 	--interactive-normal: var(--wal-foreground);
 	--background-primary: var(--wal-background);
+
+	/* Alternative gradient */
+	/* --background-primary: linear-gradient(to top, var(--wal-background), var(--wal-background-light)); */
+
+	/* Top bar above chat, normally the same color as background primary. */
+	--bg-overlay-2: var(--wal-background-light);
+
 	/* The "Discord purple" color - main setting buttons, "x unread messages" tooltip, etc. */
 	--brand-experiment: var(--wal-color-12-bright-blue);
 
@@ -113,5 +120,6 @@
 }}
 
 /* idk i don't use light theme sorry */
-/* .theme-light {{ */
-/* }} */
+.theme-light {{
+	--text-normal: var(--wal-foreground);
+}}
