@@ -94,21 +94,22 @@
 
 	/* This guy just kinda overrides a bunch of stuff consistently, for free. */
 	/* Sidebar, search box, text box, etc. */
+	/* However, it makes the searchbox blend in if --bg-overlay-2 is set to the same light color. */
 	--bg-overlay-3: var(--wal-background-light);
 
-	/* Chat text box, overriden by the guy above. */
-	/* --channeltextarea-background: var(--wal-background-extra-light); */
+	/* Chat text box, overriden by the guy above if you use em. */
+	/* --channeltextarea-background: var(--wal-background-light); */
+	/* Used for at least the searchbox, also overriden. */
+	/* --background-tertiary: var(--wal-background); */
 
-	/* Still used for e.g. video embed backgrounds */
+	/* Still used for e.g. video embed/server folder backgrounds */
 	--background-secondary: var(--wal-background-light);
-
 	--background-secondary-alt: var(--wal-background-extra-light);
-	--background-tertiary: var(--wal-background);
+	--background-floating: var(--wal-background);
 
 	--background-mobile-primary: var(--wal-background);
 	--background-mobile-secondary: var(--wal-background-light);
 	--button-secondary-background: var(--wal-background);
-	--background-floating: var(--wal-background);
 
 	--background-modifier-hover: rgba(0, 0, 0, 0.20);
 	--background-modifier-active: rgba(0, 0, 0, 0.25);
