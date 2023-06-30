@@ -8,8 +8,7 @@
 
 :root {{
 	/* Colors are written this way so that you can do e.g. */
-	/* rgba(var(--wal-color-5-purple), 0.75); */
-	/* for opaticy */
+	/* rgba(var(--wal-color-5-purple), 0.75); for opaticy */
 
 	/* Background is defined later, with various luminosities. */
 	--wal-foreground: {foreground.rgb};
@@ -118,10 +117,14 @@
 	--background-modifier-active: rgba(0, 0, 0, 0.25);
 	--background-modifier-selected: rgba(0, 0, 0, 0.30);
 
+	/* The scrollbar thumb may also looks good if you set it to e.g. pruple or blue. */
+	/* --scrollbar-auto-thumb: rgb(var(--wal-color-5-purple)); */
 	--scrollbar-auto-thumb: rgb(var(--wal-background-extra-light));
-	--scrollbar-auto-track: rgba(var(--wal-red-light), var(--wal-green-light), var(--wal-blue-light), 0.75);
-	/* Track may also looks good if you set it to e.g. pruple or blue. */
+	
+	/* The scrollbar track may also looks good if you set it to e.g. pruple or blue. */
 	/* --scrollbar-auto-track: rgba(var(--wal-color-5-purple), 0.75); */
+	--scrollbar-auto-track: rgba(var(--wal-red-light), var(--wal-green-light), var(--wal-blue-light), 0.75);
+
 	/* Used in settings, left side */
 	--scrollbar-thin-thumb: rgb(var(--wal-foreground));
 
