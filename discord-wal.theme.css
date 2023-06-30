@@ -7,27 +7,31 @@
 */
 
 :root {{
+	/* Colors are written this way so that you can do e.g. */
+	/* rgba(var(--wal-color-5-purple), 0.75); */
+	/* for opaticy */
+
 	/* Background is defined later, with various luminosities. */
-	--wal-foreground: {foreground};
-	--wal-cursor: {cursor};
+	--wal-foreground: {foreground.rgb};
+	--wal-cursor: {cursor.rgb};
 
-	--wal-color-0-black: {color0};
-	--wal-color-1-red: {color1};
-	--wal-color-2-green: {color2};
-	--wal-color-3-yellow: {color3};
-	--wal-color-4-blue: {color4};
-	--wal-color-5-purple: {color5};
-	--wal-color-6-cyan: {color6};
-	--wal-color-7-white: {color7};
+	--wal-color-0-black: {color0.rgb};
+	--wal-color-1-red: {color1.rgb};
+	--wal-color-2-green: {color2.rgb};
+	--wal-color-3-yellow: {color3.rgb};
+	--wal-color-4-blue: {color4.rgb};
+	--wal-color-5-purple: {color5.rgb};
+	--wal-color-6-cyan: {color6.rgb};
+	--wal-color-7-white: {color7.rgb};
 
-	--wal-color-8-bright-black: {color8};
-	--wal-color-9-bright-red: {color9};
-	--wal-color-10-bright-green: {color10};
-	--wal-color-11-bright-yellow: {color11};
-	--wal-color-12-bright-blue:  {color12};
-	--wal-color-13-bright-purple: {color13};
-	--wal-color-14-bright-cyan:  {color14};
-	--wal-color-15-bright-white: {color15};
+	--wal-color-8-bright-black: {color8.rgb};
+	--wal-color-9-bright-red: {color9.rgb};
+	--wal-color-10-bright-green: {color10.rgb};
+	--wal-color-11-bright-yellow: {color11.rgb};
+	--wal-color-12-bright-blue: {color12.rgb};
+	--wal-color-13-bright-purple: {color13.rgb};
+	--wal-color-14-bright-cyan: {color14.rgb};
+	--wal-color-15-bright-white: {color15.rgb};
 
 
 	/*
@@ -38,7 +42,7 @@
 	https://www.sitepoint.com/javascript-generate-lighter-darker-color/
 	 */
 
-	/* walfox values, so that it's nice and matching */
+	/* pywalfox values, so that it's nice and matching */
 	--background-light-luminance: 1.25;
 	--background-extra-light-luminance: 1.85;
 
@@ -55,15 +59,15 @@
 	--wal-green-extra-light: min(max(0, calc(var(--wal-bg-green) + (var(--wal-bg-green) * var(--background-extra-light-luminance)))), 255);
 	--wal-blue-extra-light: min(max(0, calc((var(--wal-bg-blue) + var(--wal-bg-blue) * var(--background-extra-light-luminance)))), 255);
 
-	--wal-background: rgb(var(--wal-bg-red), var(--wal-bg-green), var(--wal-bg-blue));
-	--wal-background-light: rgb(var(--wal-red-light), var(--wal-green-light), var(--wal-blue-light));
-	--wal-background-extra-light: rgb(var(--wal-red-extra-light), var(--wal-green-extra-light), var(--wal-blue-extra-light));
+	--wal-background: var(--wal-bg-red), var(--wal-bg-green), var(--wal-bg-blue);
+	--wal-background-light: var(--wal-red-light), var(--wal-green-light), var(--wal-blue-light);
+	--wal-background-extra-light: var(--wal-red-extra-light), var(--wal-green-extra-light), var(--wal-blue-extra-light);
 }}
 
 /* Text selection color, I just think it's cool. */
 ::selection {{
-	color: var(--wal-foreground);
-	background: var(--wal-background-extra-light);
+	color: rgb(var(--wal-foreground));
+	background: rgb(var(--wal-background-extra-light));
 }}
 
 
@@ -77,50 +81,49 @@
 
 .theme-dark {{
 	/* This is nice, but I find it a bit harder to read text if it's any darker. */
-	/* --text-normal: var(--wal-foreground); */
+	/* --text-normal: rgb(var(--wal-foreground)); */
 
-	--interactive-normal: var(--wal-foreground);
-	--background-primary: var(--wal-background);
+	--interactive-normal: rgb(var(--wal-foreground));
+	--background-primary: rgb(var(--wal-background));
 
 	/* Alternative gradient background, but you need to fix the top overlay too. */
-	/* --background-primary: linear-gradient(to top, var(--wal-background), var(--wal-background-light)); */
-	/* --bg-overlay-2: var(--wal-foreground); */
+	/* --background-primary: linear-gradient(to top, rgb(var(--wal-background)), rgb(var(--wal-background-light))); */
+	/* --bg-overlay-2: rgb(var(--wal-foreground)); */
 
 	/* Lighter top bar also looks nice. Normally the same color as background primary. */
-	/* --bg-overlay-2: var(--wal-background-light); */
+	/* But you may need to disable overlay-3 below and color the searchbox. */
+	/* --bg-overlay-2: rgb(var(--wal-background-light)); */
 
-	/* The "Discord purple" color - main setting buttons, "x unread messages" tooltip, etc. */
-	--brand-experiment: var(--wal-color-12-bright-blue);
+	/* The "Discord blue" color - main setting buttons, "x unread messages" tooltip, etc. */
+	/* pywalfox uses green and purple (as primary and secondary) on default settings, if you want parity. */
+	--brand-experiment: rgb(var(--wal-color-5-purple));
+	--button-secondary-background: rgb(var(--wal-background));
 
 	/* This guy just kinda overrides a bunch of stuff consistently, for free. */
 	/* Sidebar, search box, text box, etc. */
 	/* However, it makes the searchbox blend in if --bg-overlay-2 is set to the same light color. */
-	--bg-overlay-3: var(--wal-background-light);
+	--bg-overlay-3: rgb(var(--wal-background-light));
 
 	/* Chat text box, overriden by the guy above if you use em. */
-	/* --channeltextarea-background: var(--wal-background-light); */
+	/* --channeltextarea-background: rgb(var(--wal-background-light)); */
 	/* Used for at least the searchbox, also overriden. */
-	/* --background-tertiary: var(--wal-background); */
+	/* --background-tertiary: rgb(var(--wal-background)); */
 
-	/* Still used for e.g. video embed/server folder backgrounds */
-	--background-secondary: var(--wal-background-light);
-	--background-secondary-alt: var(--wal-background-extra-light);
-	--background-floating: var(--wal-background);
-
-	--background-mobile-primary: var(--wal-background);
-	--background-mobile-secondary: var(--wal-background-light);
-	--button-secondary-background: var(--wal-background);
+	/* Still used for e.g. video embed/server folder background */
+	--background-secondary: rgb(var(--wal-background-light));
+	--background-secondary-alt: rgb(var(--wal-background-extra-light));
+	--background-floating: rgb(var(--wal-background));
 
 	--background-modifier-hover: rgba(0, 0, 0, 0.20);
 	--background-modifier-active: rgba(0, 0, 0, 0.25);
 	--background-modifier-selected: rgba(0, 0, 0, 0.30);
 
-	--scrollbar-auto-thumb: var(--wal-background-extra-light);
-	/* Track also looks good if you set it to e.g. blue. */
-	/* --scrollbar-auto-track: var(--wal-color-4-blue); */
+	--scrollbar-auto-thumb: rgb(var(--wal-background-extra-light));
 	--scrollbar-auto-track: rgba(var(--wal-red-light), var(--wal-green-light), var(--wal-blue-light), 0.75);
+	/* Track may also looks good if you set it to e.g. pruple or blue. */
+	/* --scrollbar-auto-track: rgba(var(--wal-color-5-purple), 0.75); */
 	/* Used in settings, left side */
-	--scrollbar-thin-thumb: var(--wal-foreground);
+	--scrollbar-thin-thumb: rgb(var(--wal-foreground));
 
 	/* Little dark side-bit when you click the search bar.*/
 	/* You can't actually see it in the default Discord theme? */
@@ -132,9 +135,13 @@
 	--search-popout-option-fade-hover: linear-gradient(90deg, rgba(var(--wal-red-extra-light), var(--wal-green-extra-light), var(--wal-blue-extra-light), 0), var(--wal-background-extra-light) 50%);
 	/* original */
 	/* --search-popout-option-fade-hover: linear-gradient(90deg,hsl(var(--primary-600-hsl)/0),var(--primary-600) 50%); */
+
+	/* Idk anything abt these */
+	--background-mobile-primary: rgb(var(--wal-background));
+	--background-mobile-secondary: rgb(var(--wal-background-light));
 }}
 
 /* idk i don't use light theme sorry */
 .theme-light {{
-	--text-normal: var(--wal-foreground);
+	--text-normal: rgb(var(--wal-foreground));
 }}
