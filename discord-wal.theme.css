@@ -66,9 +66,19 @@
 	background: var(--wal-background-extra-light);
 }}
 
+
+/* There is a weird shadow on the top buttons buttons. */
+/* You can't actually see it in vanilla but it's there on colored. */
+/* Can't seem to set --__header-bar-background which it uses, so selector it is. */
+/* This feels like a generated name, hopefully it persists through updates. */
+.theme-dark .children-3xh0VB:after {{
+	background: none;
+}}
+
 .theme-dark {{
-	/* This is nice, but I find it a bit harder to read if it's darker. */
+	/* This is nice, but I find it a bit harder to read text if it's any darker. */
 	/* --text-normal: var(--wal-foreground); */
+
 	--interactive-normal: var(--wal-foreground);
 	--background-primary: var(--wal-background);
 
@@ -76,7 +86,7 @@
 	/* --background-primary: linear-gradient(to top, var(--wal-background), var(--wal-background-light)); */
 
 	/* Top bar above chat, normally the same color as background primary. */
-	--bg-overlay-2: var(--wal-background-light);
+	/* --bg-overlay-2: var(--wal-background-light); */
 
 	/* The "Discord purple" color - main setting buttons, "x unread messages" tooltip, etc. */
 	--brand-experiment: var(--wal-color-12-bright-blue);
@@ -93,6 +103,7 @@
 
 	--background-secondary-alt: var(--wal-background-extra-light);
 	--background-tertiary: var(--wal-background);
+
 	--background-mobile-primary: var(--wal-background);
 	--background-mobile-secondary: var(--wal-background-light);
     --button-secondary-background: var(--wal-background);
@@ -103,6 +114,8 @@
 	--background-modifier-selected: rgba(0, 0, 0, 0.30);
 
 	--scrollbar-auto-thumb: var(--wal-background-extra-light);
+	/* Track also looks good if you set it to e.g. blue. */
+	/* --scrollbar-auto-track: var(--wal-color-4-blue); */
 	--scrollbar-auto-track: rgba(var(--wal-red-light), var(--wal-green-light), var(--wal-blue-light), 0.75);
 	/* Used in settings, left side */
 	--scrollbar-thin-thumb: var(--wal-foreground);
@@ -111,7 +124,7 @@
 	/* You can't actually see it in the default Discord theme? */
 	/* So we hide it cause you can deffo see it on any other color theme and it looks bad.*/
 	--search-popout-option-fade: 0;
-	/* original */
+	/* Original noted here, cause it was a paint to get. */
 	/* --search-popout-option-fade: linear-gradient(90deg,hsl(var(--primary-800-hsl)/0),hsl(var(--primary-800-hsl)/1) 80%); */
 
 	--search-popout-option-fade-hover: linear-gradient(90deg, rgba(var(--wal-red-extra-light), var(--wal-green-extra-light), var(--wal-blue-extra-light), 0), var(--wal-background-extra-light) 50%);
