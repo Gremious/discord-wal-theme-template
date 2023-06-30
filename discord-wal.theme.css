@@ -82,10 +82,11 @@
 	--interactive-normal: var(--wal-foreground);
 	--background-primary: var(--wal-background);
 
-	/* Alternative gradient */
+	/* Alternative gradient background, but you need to fix the top overlay too. */
 	/* --background-primary: linear-gradient(to top, var(--wal-background), var(--wal-background-light)); */
+	/* --bg-overlay-2: var(--wal-foreground); */
 
-	/* Top bar above chat, normally the same color as background primary. */
+	/* Lighter top bar also looks nice. Normally the same color as background primary. */
 	/* --bg-overlay-2: var(--wal-background-light); */
 
 	/* The "Discord purple" color - main setting buttons, "x unread messages" tooltip, etc. */
@@ -106,7 +107,7 @@
 
 	--background-mobile-primary: var(--wal-background);
 	--background-mobile-secondary: var(--wal-background-light);
-    --button-secondary-background: var(--wal-background);
+	--button-secondary-background: var(--wal-background);
 	--background-floating: var(--wal-background);
 
 	--background-modifier-hover: rgba(0, 0, 0, 0.20);
