@@ -8,7 +8,7 @@ Dark theme only, sorry, I don't really use light themes, though it might work ok
 
 ## Usage
 
-Add this file to your `$HOME\.config\wal\templates` and there will be a `discord-wal.theme.css` in your `$HOME\.cache\wal` when you run `pywal`.
+Add this file to your `$HOME\.config\wal\templates` and there will be a `discord-wal.theme.css` in your `$HOME\.cache\wal` when you run `pywal (as per [https://github.com/dylanaraps/pywal/wiki/User-Template-Files](https://github.com/dylanaraps/pywal/wiki/User-Template-Files))
 
 Until Vencored closes https://github.com/Vendicated/Vencord/issues/614, I recomend copying the cached theme to `$HOME\AppData\Roaming\Vencord\settings\quickCss.css` in the script you run to update things after running wal or w/e (be mindful of overrides if you use css snippets).
 
