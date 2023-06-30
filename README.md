@@ -1,4 +1,4 @@
-A wal template for [Vencord](https://github.com/Vendicated/Vencord) (or probably any other client capable of loading css, no guarantees).
+A pywal template for [Vencord](https://github.com/Vendicated/Vencord) (or probably any other client capable of loading css, no guarantees).
 
 Does not modify any discord styling outside of colors - it is just a recolored, vanilla discord.
 
