@@ -81,6 +81,7 @@
 .theme-dark {{
 	/* This is nice, but I find it a bit harder to read text if it's any darker. */
 	/* --text-normal: rgb(var(--wal-foreground)); */
+	--channels-default: rgb(var(--wal-foreground));
 
 	--interactive-normal: rgb(var(--wal-foreground));
 	--background-primary: rgb(var(--wal-background));
