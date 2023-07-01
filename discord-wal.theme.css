@@ -95,7 +95,7 @@
 
 	/* The "Discord blue" color - main setting buttons, "x unread messages" tooltip, etc. */
 	/* pywalfox uses green and purple (as primary and secondary) on default settings, if you want parity. */
-	--brand-experiment: rgb(var(--wal-color-5-purple));
+	--brand-experiment: rgb(var(--wal-color-2-green));
 	--button-secondary-background: rgb(var(--wal-background));
 
 	/* This guy just kinda overrides a bunch of stuff consistently, for free. */
@@ -118,11 +118,11 @@
 	--background-modifier-selected: rgba(0, 0, 0, 0.30);
 
 	/* The scrollbar thumb may also looks good if you set it to e.g. pruple or blue. */
-	/* --scrollbar-auto-thumb: rgb(var(--wal-color-5-purple)); */
+	/* --scrollbar-auto-thumb: rgb(var(--wal-color-2-green)); */
 	--scrollbar-auto-thumb: rgb(var(--wal-background-extra-light));
-	
+
 	/* The scrollbar track may also looks good if you set it to e.g. pruple or blue. */
-	/* --scrollbar-auto-track: rgba(var(--wal-color-5-purple), 0.75); */
+	/* --scrollbar-auto-track: rgba(var(--wal-color-2-green), 0.75); */
 	--scrollbar-auto-track: rgba(var(--wal-red-light), var(--wal-green-light), var(--wal-blue-light), 0.75);
 
 	/* Used in settings, left side */
