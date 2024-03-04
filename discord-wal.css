@@ -32,7 +32,6 @@
 	--wal-color-14-bright-cyan: {color14.rgb};
 	--wal-color-15-bright-white: {color15.rgb};
 
-
 	/*
 	https://css-tricks.com/css-variables-calc-rgb-enforcing-high-contrast-colors/
 	feat.
@@ -48,7 +47,6 @@
 	--wal-bg-red: calc({background.red} * 255);
 	--wal-bg-green: calc({background.green} * 255);
 	--wal-bg-blue: calc({background.blue} * 255);
-
 
 	--wal-red-light: min(max(0, calc(var(--wal-bg-red) + (var(--wal-bg-red) * var(--background-light-luminance)))), 255);
 	--wal-green-light: min(max(0, calc(var(--wal-bg-green) + (var(--wal-bg-green) * var(--background-light-luminance)))), 255);
@@ -80,7 +78,7 @@
 
 .theme-dark {{
 	/* This is nice, but I find it a bit harder to read text if it's any darker. */
-	/* --text-normal: rgb(var(--wal-foreground)); */
+	--text-normal: rgb(var(--wal-foreground));
 	--channels-default: rgb(var(--wal-foreground));
 
 	--interactive-normal: rgb(var(--wal-foreground));
