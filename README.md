@@ -19,6 +19,7 @@ Copy `discord-wallust.css` to `%appdata%\wallust`
 
 Add 
 ```toml
+new_engine = true
 pywalfox = { template = 'discord-wallust.css', target = 'C:/Users/UsernameAppData/Roaming/Vencord/themes/wallust.css' }
 ```
 to your `%appdata%\wallust\wallust.toml`
