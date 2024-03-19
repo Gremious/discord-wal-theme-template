@@ -20,7 +20,7 @@ Copy `discord-wallust.css` to `%appdata%\wallust`
 Add 
 ```toml
 new_engine = true
-pywalfox = { template = 'discord-wallust.css', target = 'C:/Users/UsernameAppData/Roaming/Vencord/themes/wallust.css' }
+pywalfox = { template = 'discord-wallust.css', target = 'C:/Users/Username/AppData/Roaming/Vencord/themes/wallust.css' }
 ```
 to your `%appdata%\wallust\wallust.toml`
 Note that for toml, that *has* to be on one line. As an alternative, you can also write:
