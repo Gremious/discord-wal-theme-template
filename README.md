@@ -33,7 +33,6 @@ vencord = { template = 'discord-wallust-beta.css', target = 'C:/Users/Username/A
 Note that for toml, that *has* to be on one line. As an alternative, you can also write:
 
 ```toml
-[templates]
 [templates.vencord]
 template = 'discord-wallust.css'
 target = 'C:/Users/Gremious/AppData/Roaming/Vencord/themes/wallust.css'
@@ -47,7 +46,7 @@ Copy `discord-wallust.css` to `%appdata%\wallust` and
 add this to your `%appdata%\wallust\wallust.toml`
 
 ```toml
-[[entry]]
+[templates.vencord]
 template = 'discord-wallust.css'
 target = 'C:/Users/Username/AppData/Roaming/Vencord/themes/wallust.css'
 ```
