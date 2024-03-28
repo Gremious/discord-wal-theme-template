@@ -9,7 +9,7 @@ Dark theme only, sorry, I don't really use light themes, though it might work ok
 ## Usage
 
 ### pywal
-Add the `discord-pywal.css` file to your `$HOME\.config\wal\templates`. After generating a pallette with `wal` there will be a `discord-pywal.css` file in your `$HOME\.cache\wal` directory.  
+Add the `discord-pywal.css` file to your `$HOME\.config\wal\templates`. After generating a pallette with `wal` there will be a `discord-pywal.css` file in your `$HOME\.cache\wal` directory.
 See [https://github.com/dylanaraps/pywal/wiki/User-Template-Files](https://github.com/dylanaraps/pywal/wiki/User-Template-Files) for more information
 
 You can then copy the cached theme to `$HOME\AppData\Roaming\Vencord\themes\pywal.css` in the script you run to update things after running wal or w/e. Then you can enable it in the Vencord settings.
@@ -27,7 +27,7 @@ Copy `discord-wallust-beta.css` to `%appdata%\wallust` and
 add this line to your `%appdata%\wallust\wallust.toml`
 
 ```toml
-pywalfox = { template = 'discord-wallust-beta.css', target = 'C:/Users/Username/AppData/Roaming/Vencord/themes/wallust.css' }
+vencord = { template = 'discord-wallust-beta.css', target = 'C:/Users/Username/AppData/Roaming/Vencord/themes/wallust.css' }
 ```
 
 Note that for toml, that *has* to be on one line. As an alternative, you can also write:
