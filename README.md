@@ -9,20 +9,27 @@ Dark theme only, sorry, I don't really use light themes, though it might work ok
 ## Usage
 
 ### pywal
-Add this file to your `$HOME\.config\wal\templates` and there will be a `discord-wal.css` in your `$HOME\.cache\wal` when you run `pywal` (as per [https://github.com/dylanaraps/pywal/wiki/User-Template-Files](https://github.com/dylanaraps/pywal/wiki/User-Template-Files)).
+Add the `discord-pywal.css` file to your `$HOME\.config\wal\templates`. After generating a pallette with `wal` there will be a `discord-pywal.css` file in your `$HOME\.cache\wal` directory.  
+See [https://github.com/dylanaraps/pywal/wiki/User-Template-Files](https://github.com/dylanaraps/pywal/wiki/User-Template-Files) for more information
 
-You can then copy the cached theme to `$HOME\AppData\Roaming\Vencord\themes\wal.css` in the script you run to update things after running wal or w/e. Then you can enable it in the settings.
+You can then copy the cached theme to `$HOME\AppData\Roaming\Vencord\themes\pywal.css` in the script you run to update things after running wal or w/e. Then you can enable it in the Vencord settings.
 
 ### wallust
-
-Copy `discord-wallust.css` to `%appdata%\wallust`
-
-Add 
-```toml
-new_engine = true
-pywalfox = { template = 'discord-wallust.css', target = 'C:/Users/Username/AppData/Roaming/Vencord/themes/wallust.css' }
+When using wallust you first need to check which version you have. You can do that by running this command:
+```sh
+wallust --version
 ```
-to your `%appdata%\wallust\wallust.toml`
+
+<details>
+<summary>Should your version be >= than 3.0.0 follow this guide</summary>
+
+Copy `discord-wallust-beta.css` to `%appdata%\wallust` and
+add this line to your `%appdata%\wallust\wallust.toml`
+
+```toml
+pywalfox = { template = 'discord-wallust-beta.css', target = 'C:/Users/Username/AppData/Roaming/Vencord/themes/wallust.css' }
+```
+
 Note that for toml, that *has* to be on one line. As an alternative, you can also write:
 
 ```toml
@@ -31,9 +38,22 @@ Note that for toml, that *has* to be on one line. As an alternative, you can als
 template = 'discord-wallust.css'
 target = 'C:/Users/Gremious/AppData/Roaming/Vencord/themes/wallust.css'
 ```
+</details>
 
----
+<details>
+<summary>Otherwise please follow these instructions</summary>
 
+Copy `discord-wallust.css` to `%appdata%\wallust` and
+add this to your `%appdata%\wallust\wallust.toml`
+
+```toml
+[[entry]]
+template = 'discord-wallust.css'
+target = 'C:/Users/Username/AppData/Roaming/Vencord/themes/wallust.css'
+```
+</details>
+
+## Editing
 I have left a bunch of notes and commented styles, and the color variable names are pretty self-explanatory: feel free to tinker around!
 
 If you want e.g. comfycord/material/etc. support, you can edit the theme/template directly (e.g. in Vencord's "Open QuickCSS File") and import your favorite theme before the colors. Don't shy away from DIYing with the theme/template, it is not difficult.
