@@ -79,11 +79,16 @@
 }
 
 .theme-dark {
-	/* This is nice, but I find it a bit harder to read text if it's any darker. */
+	/* This is nice, feel free to uncomment, but I find it a bit harder to read text if it's any darker. */
 	/* --text-normal: rgb(var(--wal-foreground)); */
 
-	--interactive-normal: rgb(var(--wal-foreground));
 	--background-primary: rgb(var(--wal-background));
+	/* forums/members page bg, maybe others */
+	--home-background: rgb(var(--wal-background));
+	/*  Don't see it used much, but it's at least the bg in the app directory page in the server settings */
+	--primary-600: rgb(var(--wal-background));
+
+	--interactive-normal: rgb(var(--wal-foreground));
 
 	/* Alternative gradient background, but you need to fix the top overlay too. */
 	/* --background-primary: linear-gradient(to top, rgb(var(--wal-background)), rgb(var(--wal-background-light))); */
