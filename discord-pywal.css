@@ -87,7 +87,15 @@
 	/*  Don't see it used much, but it's at least the bg in the app directory page in the server settings */
 	--primary-600: rgb(var(--wal-background));
 
+	/* Interactive buttons - pins, emote, channel settings cog, etc. */
 	--interactive-normal: rgb(var(--wal-foreground));
+	/* Interactable things with more attention - undread channel names,
+	 * and text that you can click (thread message) */
+	--interactive-active: rgb(var(--wal-foreground));
+
+	/* Mostly default username color,
+	 * and some little dots like the unread server indicator */
+	--header-primary: rgb(var(--wal-foreground));
 
 	/* Alternative gradient background, but you need to fix the top overlay too. */
 	/* --background-primary: linear-gradient(to top, rgb(var(--wal-background)), rgb(var(--wal-background-light))); */
