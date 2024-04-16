@@ -110,8 +110,8 @@
 	--bg-overlay-2: rgb(var(--wal-background-light));
 
 	/* The "Discord blue" color - main setting buttons, "x unread messages" tooltip, etc. */
-	/* pywalfox uses green and purple (as primary and secondary) on default settings, if you want parity. */
-	--brand-experiment: rgb(var(--wal-color-5-purple));
+	/* pywalfox uses color 10 and 13 (as primary and secondary) on default settings, if you want parity. */
+	--brand-experiment: rgb(var(--wal-color-10-bright-green));
 	--button-secondary-background: rgb(var(--wal-background));
 
 	/* This guy just kinda overrides a bunch of stuff consistently, for free. */
