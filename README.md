@@ -1,3 +1,7 @@
+Currently doesn't work cause of the discord redesign.
+But maybe one day i'll get to it again.
+
+
 A pywal and [wallust](https://codeberg.org/explosion-mental/wallust) template for [Vencord](https://github.com/Vendicated/Vencord) (or probably any other client capable of loading css, no guarantees).
 
 Does not modify any discord styling outside of colors - it is just a recolored, vanilla discord.
